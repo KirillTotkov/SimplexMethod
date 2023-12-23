@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    padding: 3px;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+}
+
+input[type="text"] {
+    padding: 4px;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    /*border-color: var(--ast-border-color);*/
+    border-radius: 2px;
+    /*background: var(--ast-comment-inputs-background);*/
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+
+body {
+    height: 100vh;
+    font-size: 24px;
+    background: #FCF5F3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    /*height: 60px;*/
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+header .title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .title span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+header .history {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FCF5F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+
+.container {
+    padding: 40px;
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.number-variables, .number-constraints {
+    margin-bottom: 4px;
+}
+
+.number-variables label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+
+#numVariables, #numConstraints {
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #FF8630;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    font-size: large;
+    margin: 5px;
+}
+
+.variable-input {
+    width: 40px;
+    height: 29px;
+    margin-left: 4px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.variable-name {
+    font-size: 16px;
+    margin-left: 2px;
+    margin-right: 3px;
+}
+
+select {
+    position: relative;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 2px 12px;
+    /*font-family: inherit;*/
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: black;
+}
+
+#sign {
+    padding: 4px 10px;
+    font-size: 14px;
+    background: white;
+}
+
+.function {
+    margin-top: 10px;
+}
+
+.constraints {
+    margin-top: 20px;
+}
+
+.constraints-non-negativity {
+    padding-left: 4px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+
+.drawer-scrolling {
+    font-size: 16px;
+    background-color: black;
+}
+
+.drawer_item {
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow-y: auto;
+    padding: 0 10px 10px 10px;
+    line-height: 1.5;
+}
+
+.drawer_item:hover {
+    background-color: #e5e5e5;
+    transition: background-color 0.1s linear;
+}
+
+.drawer_item:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.drawer_item__header {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border-bottom: 1px solid #52525b;
+    margin-bottom: 10px;
+}
+
+.remove_item {
+
+}
+
+.drawer_item__function-label, .drawer_item__constraints-label, .drawer_item__result-label {
+    font-weight: 700;
+}
+
+.drawer_item__function-value, .drawer_item__constraints-list {
+    padding-left: 2px;
+}
+
+.dialog-overview sl-button {
+    margin-left: 16px;
+    width: 80px;
+}
+
+.solve-details {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.solve-details h3 {
+    font-size: 26px;
+}
+
+table {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-collapse: collapse;
+    font-size: 22px;
+    overflow-x: auto;
+    display: block;
+}
+
+table th:first-child {
+    background: #feceab;
+}
+
+table thead {
+    background: #feceab;
+    border-top: 7px solid #FF8630;
+}
+
+td, th {
+    border: 1px solid #FF8630;
+    border-left-width: 0;
+    padding: 14px;
+    vertical-align: top;
+    line-height: 1.2;
+    text-align: center;
+    width: 65px;
+}
+
+.solve-simplex-table {
+    margin-top: 20px;
+}
+
+.canonical-form, .initial-form {
+    margin-top: 4px;
+}
+
+.canonical-form-equations, .initial-form-equations {
+    padding-left: 12px;
+}
+
+.canonical-form-obj_func, .initial-form-obj_func {
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.stage {
+    margin-top: 4px;
+}
+
+.table-elem-resolving {
+    background-color: #9ce785 !important;
+}
+
+.table-elem-resolving-number {
+    background-color: #5089c6;
+}
+
+.iteration p {
+    margin-top: 8px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cимплекс-метод</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/light.css"/>
+    <script type="module"
+            src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+<sl-drawer label="История решений" class="drawer-scrolling">
+    <sl-icon-button class="remove-all" slot="header-actions" name="trash3"></sl-icon-button>
+    <div class="drawer-list">
+
+    </div>
+</sl-drawer>
+
+<header class="header">
+    <div class="title">
+        Калькулятор симплекс-метода
+    </div>
+    <div class="history">
+        <sl-icon name="clock-history"></sl-icon>
+    </div>
+</header>
+
+<div class="container">
+    <form class="calculator" onsubmit="return false">
+        <div class="input-numbers">
+            <div class="number-variables">
+                <label>Количество переменных:</label>
+                <input type="number" id="numVariables" min="1" max="10" value="3" required>
+            </div>
+            <div class="number-constraints">
+                <label>Количество ограничений:</label>
+                <input type="number" id="numConstraints" min="1" max="10" value="3" required>
+            </div>
+        </div>
+
+        <div class="function">
+            <b>Целевая функция:</b>
+            <div class="function-equation">
+
+            </div>
+        </div>
+        <div class="constraints">
+            <b>Ограничения:</b>
+            <div class="constraints-equations">
+
+            </div>
+            <div class="constraints-non-negativity">
+
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn reset">Очистить</button>
+            <button type="submit" class="btn solve">Решить</button>
+        </div>
+    </form>
+
+    <div class="solve">
+        <div class="solve-briefly">
+
+        </div>
+        <div class="solve-details">
+
+        </div>
+    </div>
+</div>
+
+<aside class="sidebar">
+
+</aside>
+
+</body>
+</html>
